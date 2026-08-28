@@ -1,0 +1,22 @@
+{
+  "name": "ai-engineering-journey",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --env-file=.env dist/src/index.js",
+    "dev": "node --env-file=.env --import tsx src/index.ts",
+    "eval": "node --import tsx --test eval/*.eval.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "dependencies": {
+    "openai": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
